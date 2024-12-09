@@ -55,6 +55,14 @@ end)
 IO.puts time_ms
 ```
 
+Another way would be to perform manual checksum calculations without chunking:
+
+```elixir
+{time_ms, ret_val} = :timer.tc(fn ->
+    :crypto.hash(:sha256, File.read!("slides.pdf")) |> Base.encode16(case: :lower)
+end)
+```
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed

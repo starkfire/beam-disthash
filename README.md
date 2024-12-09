@@ -1,6 +1,6 @@
 # DistHash
 
-**Distributed File Hash Computations**
+**Distributed checksum computations in BEAM/Elixir**
 
 ## Overview
 
